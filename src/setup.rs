@@ -44,7 +44,7 @@ pub(crate) fn initial_state(config: config::SpotifydConfig) -> main_loop::MainLo
                             .clone()
                             .or_else(|| audio_device.clone())
                             .unwrap_or_else(|| "default".to_string()),
-                        mixer: mixer.clone().unwrap_or_else(|| "Master".to_string()),
+                        mixer: mixer.clone().unwrap_or_else(|| "Digital".to_string()),
                         linear_scaling: linear,
                     }) as Box<dyn mixer::Mixer>
                 }) as Box<dyn FnMut() -> Box<dyn Mixer>>

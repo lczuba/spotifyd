@@ -38,7 +38,7 @@ impl Mixer for AlsaMixer {
     fn open(_: Option<MixerConfig>) -> AlsaMixer {
         AlsaMixer {
             device: "default".to_string(),
-            mixer: "Master".to_string(),
+            mixer: "Digital".to_string(),
             linear_scaling: false,
         }
     }
